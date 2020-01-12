@@ -9,51 +9,34 @@ import java.util.Scanner;
 public class Dictionary
     {
         public Dictionary(){}
-
         public void HashMap()
         {
             HashMap<String, String> Dictionary = new HashMap<String, String>();
-
-            Dictionary.put("A","Alpha");
-            Dictionary.put("B","Beta");
-            Dictionary.put("C","Gamma");
-            Dictionary.put("D","Delta");
-            Dictionary.put("E","Epsilon");
-            Dictionary.put("F","Zeta");
+            
+            String[] keys = {"A", "B", "C", "D", "E", "F"};
+            String[] values = {"Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta"};
+            
+            for(i=0; i < keys.length; i++){
+                for(j=0; j < values.length; j++){
+                    Dictionary.put(keys[i], values[j])
+                }
+            }
 
             Scanner dict = new Scanner(System.in);
             String input = dict.nextLine();
-            if(input.equals("A"))
-            {
-                String key = Dictionary.get("A");
-                System.out.println(key);
-            }
-
-            else if(input.equals("B"))
-            {
-                String key2 = Dictionary.get("B");
-                System.out.println(key2);
-            }
-
-            else if(input.equals("C"))
-            {
-                String key3 = Dictionary.get("C");
-                System.out.println(key3);
-            }
-            else if(input.equals("D"))
-            {
-                String key4 = Dictionary.get("D");
-                System.out.println(key4);
-            }
-            else if(input.equals("E"))
-            {
-                String key5 = Dictionary.get("E");
-                System.out.println(key5);
-            }
-            else if(input.equals("F"))
-            {
-                String key6 = Dictionary.get("F");
-                System.out.println(key6);
-            }
+            
+            switch(input):
+                case "A":
+                    System.out.println(Dictionary.get("A"));    
+                case "B": 
+                    System.out.println(Dictionary.get("B"));
+                case "C": 
+                    System.out.println(Dictionary.get("C"));
+                case "D": 
+                    System.out.println(Dictionary.get("D"));
+                case "E": 
+                    System.out.println(Dictionary.get("E"));
+                case "F":
+                    System.out.println(Dictionary.get("F"));
         }
     }
